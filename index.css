@@ -1,0 +1,181 @@
+@media (max-width: 600px){
+    body{
+        align-items: center !important;
+        justify-content: top !important;
+        display: flex !important;
+        flex-direction: column;
+    }
+    #name{
+        padding-left: 0 !important;
+        font-size: 50px !important;
+    }
+    #keywords{
+        padding-top: 20px !important;
+        padding-left: 0 !important;
+        font-size: 40px !important;
+    }
+    .text{
+        padding-left: 0 !important;
+    }
+    #interestsDiv{
+        padding-top: 30px !important;
+        font-size: 25px !important;
+        padding-left: 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    #audio{
+        padding-left: 0 !important;
+        position: fixed;
+        padding-bottom: 30px;
+        bottom: 0 !important;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px){
+    body{
+        align-items: center !important;
+        justify-content: top !important;
+        display: flex !important;
+        flex-direction: column;
+    }
+    #name{
+        padding-left: 0 !important;
+        font-size: 70px !important;
+    }
+    #keywords{
+        padding-top: 25px !important;
+        padding-left: 0 !important;
+        font-size: 50px !important;
+    }
+    .text{
+        padding-left: 0 !important;
+    }
+    #interestsDiv{
+        padding-top: 35px !important;
+        font-size: 30px !important;
+        padding-left: 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    #audio{
+        padding-left: 0 !important;
+        position: fixed;
+        padding-bottom: 30px;
+        bottom: 0 !important;
+    }
+}
+
+@font-face {
+    font-family: neuropolitical;
+    src: url(neuropolitical\ rg.otf);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+@keyframes fadeInAudio {
+    0% { opacity: 0;}
+    100% { opacity: 0.5;}
+}
+
+html{
+    font-family: neuropolitical;
+}
+
+body{
+    background-color: black;
+    background-size: 100% 100%;
+    cursor: url('ocean_cursor_arrow_4.gif'), auto;
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#container button{
+    width: 300px;
+    height: 150px;
+    border-radius: 3px;
+    background-image: linear-gradient(#e7c2ff, #a32fed);
+    color: #faec27;
+    font-size: x-large;
+    cursor: pointer;
+    border-bottom: 5px solid #a32fed;
+    border-right: 5px solid #a32fed;
+}
+#container button:hover{
+    background-image: linear-gradient(#a32fed, #5c0b8f);
+    border-bottom: 5px solid #5c0b8f;
+    border-right: 5px solid #5c0b8f;
+}
+
+.text{
+    display: none;
+    animation-delay: 4s;
+    animation: fadeIn 7.3s;
+    margin: 0;
+    padding-left: 10%;   
+}
+#name{
+    padding-top: 3%;
+    font-size: 6vw;
+    background: -webkit-linear-gradient(#faec27, #ffc017);
+    -webkit-text-stroke: 2px black; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+
+}
+#keywords{
+    padding-left: 12%;
+    padding-top: 0.6%;
+    font-size: 4vw;
+    background: -webkit-linear-gradient(#ffc017, #ffc017);
+    -webkit-text-stroke: 2px black; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+#interestsDiv{
+    font-size: 3vw;
+    font-style: italic;
+    padding-top: 0.6%;
+    padding-left: 14%;
+    width: 45%;
+    color: #0026ff; 
+    -webkit-text-stroke: 1px black;
+}
+
+#audio{
+    display: none;
+    padding-top: 3%;
+    padding-left: 22%;
+    opacity: 0.5;
+    animation-delay: 4s;
+    animation: fadeInAudio 7.3s;
+    margin: 0;
+}
+
+
+.clickable{
+    cursor: url('ocean_cursor_pointer_4.gif'), auto !important;
+}
+.clickable:hover{
+    cursor: url('ocean_cursor_pointer_4.gif'), auto !important;
+}
+
+
+#song{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #0026ff; 
+    -webkit-text-stroke: 1px black;
+}

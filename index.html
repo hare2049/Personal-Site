@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="relaxed.png">
+        <title>Harun Hadzic</title>
+    </head>
+    <body>
+        <div id="container">
+            <button class="clickable" onclick="showPage()">E N T E R</button>
+        </div>
+        <script>
+            function showPage(){
+                
+                document.getElementById("container").remove();
+                document.body.style.backgroundImage = "url('deer_sea_3.gif')";
+
+                const name = document.createElement("h1");
+                name.setAttribute("class", "text");
+                name.setAttribute("id", "name");
+                const nameText = document.createTextNode("Harun Hadžić");
+                name.appendChild(nameText);
+                document.body.appendChild(name);
+
+                const keywords = document.createElement("h2");
+                keywords.setAttribute("class", "text");
+                keywords.setAttribute("id", "keywords");
+                const keywordsText = document.createTextNode("Keywords:");
+                keywords.appendChild(keywordsText);
+                document.body.appendChild(keywords);
+
+                const interests = document.createElement("div");
+                interests.setAttribute("id", "interestsDiv");
+                interests.setAttribute("class", "text");
+                const interestsText = document.createTextNode("Node js., React js., HTML / CSS / Javascript, PostgreSQL, C++, C, Python, Java, Linux, ");
+                
+                const linkedinLink = document.createElement("a");
+                linkedinLink.setAttribute("class", "clickable");
+                linkedinLink.setAttribute("href", "https://www.linkedin.com/in/harun-hadzic-7995571b6/");
+                linkedinLink.setAttribute("target", "_blank");            
+                linkedinLink.textContent = "LinkedIn";
+
+                const githubLink = document.createElement("a");
+                githubLink.setAttribute("class", "clickable");
+                githubLink.setAttribute("href", "https://github.com/hare2049");
+                githubLink.setAttribute("target", "_blank");
+                githubLink.textContent = "GitHub";
+                
+                interests.appendChild(interestsText);
+                interests.appendChild(linkedinLink);
+                interests.appendChild(document.createTextNode(", "));
+                interests.appendChild(githubLink);
+                document.body.appendChild(interests);
+
+                const audio = document.createElement("audio");
+                audio.setAttribute("id", "audio");
+                audio.setAttribute("autoplay", "");
+               /* audio.setAttribute("loop", ""); */
+                audio.setAttribute("controls", "");
+                audio.volume = 0.1;
+
+                audio.addEventListener('ended', () => {
+                    audio.currentTime = 26.1;
+                    audio.play();
+                });
+
+
+                const source = document.createElement("source");
+                source.setAttribute("src", "whispers.wav_1.mp3");
+                source.setAttribute("type", "audio/mp3");
+                audio.appendChild(source);
+                document.body.appendChild(audio);
+
+
+                const song = document.createElement("a");
+                song.setAttribute("href", "https://www.youtube.com/watch?v=o5umdIJzYgE/");
+                song.setAttribute("target", "_blank");            
+                song.setAttribute("class", "text clickable");
+                song.setAttribute("id", "song");
+                const songText = document.createTextNode("Song source: ESPRIT 空想: WHISPERS.WAV");
+                song.appendChild(songText);
+                document.body.appendChild(song);
+
+                setTimeout(function(){
+                    let elements = document.getElementsByClassName('text');
+                    let audio = document.getElementById('audio');
+                    elements[0].style.display = 'block';
+                    elements[1].style.display = 'block';
+                    elements[2].style.display = 'block';
+                    elements[3].style.display = 'block';
+                    audio.style.display = 'block';
+
+                    setTimeout(function(){
+                        document.body.style.backgroundImage = "url('edit.gif')";
+                    }, 10000)
+
+                }, 4000);
+            }
+
+
+        </script>
+
+    
+    </body>
+</html>
