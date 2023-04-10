@@ -1,4 +1,4 @@
-# CV Site
+# Personal Site
 
 https://harunhadzic.netlify.app/
 
