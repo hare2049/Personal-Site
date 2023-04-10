@@ -1,4 +1,4 @@
-# Project_CV
+# CV Site
 
 https://harunhadzic.netlify.app/
 
